@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<DataTable>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Placement" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Placement">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CarPlacement" type="xs:string" minOccurs="0" />
+                <xs:element name="PlacementID" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <DocumentElement>
+      <Placement diffgr:id="Placement1" msdata:rowOrder="0">
+        <CarPlacement>Вокзал</CarPlacement>
+        <PlacementID>1</PlacementID>
+      </Placement>
+      <Placement diffgr:id="Placement2" msdata:rowOrder="1">
+        <CarPlacement>Городской Вал</CarPlacement>
+        <PlacementID>2</PlacementID>
+      </Placement>
+      <Placement diffgr:id="Placement3" msdata:rowOrder="2">
+        <CarPlacement>Станция Спортивная</CarPlacement>
+        <PlacementID>3</PlacementID>
+      </Placement>
+      <Placement diffgr:id="Placement4" msdata:rowOrder="3">
+        <CarPlacement>Автовокзал</CarPlacement>
+        <PlacementID>4</PlacementID>
+      </Placement>
+    </DocumentElement>
+  </diffgr:diffgram>
+</DataTable>

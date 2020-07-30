@@ -1,0 +1,58 @@
+﻿<Window x:Class="Lab08.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab08"
+        mc:Ignorable="d"
+        Title="Аренда авто" Height="456.973" Width="1026.603" Background="AliceBlue" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid Grid.Row="0" Margin="0,0,4,7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="866*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Журнал аренды" Margin="10,0,38,385" Height="28" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="dataGridJournal" Background="Azure" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,57,484,99" Grid.ColumnSpan="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding NumberDock}" Header="№ документа" Width="85"/>
+                <DataGridTextColumn Binding="{Binding DataOfDock, StringFormat=\{0:dd.MM.yy\}}" Header="Дата заказа" Width="100"/>
+                <DataGridTextColumn Binding="{Binding NumberOfAuto}" Header="Номер авто" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Start, StringFormat=\{0:dd.MM.yy\}}" Header="Дата начала" Width="82"/>
+                <DataGridTextColumn Binding="{Binding DateEnd, StringFormat=\{0:dd.MM.yy\}}" Header="Дата конца" Width="82"/>
+                <DataGridTextColumn Binding="{Binding ToPay}" Header="К оплате" Width="82"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox x:Name="Placement" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="124" Margin="643,235,0,0" ItemsSource="{Binding}" Grid.Column="2"/>
+        <TextBox HorizontalAlignment="Left" x:Name="Days" Height="22" IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="481,163,0,0" Grid.Column="2"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="PaymentDay" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" Margin="643,57,0,0" Grid.Column="2"/>
+        <TextBox HorizontalAlignment="Left" x:Name="ToPay" Height="22" IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="481,201,0,0" Grid.Column="2"/>
+        <TextBox HorizontalAlignment="Left" x:Name="Balance"  IsReadOnly="True" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="481,235,0,0" Grid.Column="2"/>
+        <TextBlock x:Name ="Dockkk" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Остаток" VerticalAlignment="Top" Margin="645,172,0,0" Height="16" Width="136" RenderTransformOrigin="0.434,0.562" Grid.Column="2"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Выберите стоянку" VerticalAlignment="Top" Margin="645,210,0,0" Height="16" Width="136" Grid.Column="2"/>
+
+        <DatePicker xmlns:sys="clr-namespace:System;assembly=mscorlib" Name="DataOfDock" SelectedDate="{x:Static sys:DateTime.Now}" DisplayDateStart="{x:Static sys:DateTime.Now}" Margin="645,28,100,361" Grid.Column="2" />
+        <DatePicker xmlns:sys="clr-namespace:System;assembly=mscorlib" SelectedDate="{x:Static sys:DateTime.Now}" DisplayDateStart="{x:Static sys:DateTime.Now}" x:Name="Start" SelectedDateChanged="eventhandler_1"  HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="481,109,0,0" Width="124" Height="26" RenderTransformOrigin="0.398,0.548" Grid.Column="2"/>
+        <DatePicker xmlns:sys="clr-namespace:System;assembly=mscorlib" SelectedDate="{x:Static sys:DateTime.Now}" DisplayDateStart="{x:Static sys:DateTime.Now}" x:Name="DateEnd"  SelectedDateChanged="eventhandler_2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="645,109,0,0" Width="124" Height="26" Grid.Column="2"/>
+        <Label Content="Аренда с" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="413,109,0,0" Height="28" Width="62" Grid.Column="2"/>
+        <Label Content="по" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="609,109,0,0" Height="26" Width="24" Grid.Column="2"/>
+        <TextBlock x:Name ="Do" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Затраты" VerticalAlignment="Top" Margin="29,343,0,0" Height="16" Width="174" Grid.Column="2"/>
+
+        <TextBox HorizontalAlignment="Left" x:Name="NumberOfAuto" IsReadOnly="True" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="481,57,0,0" TextChanged="NumberOfAuto_TextChanged" Grid.Column="2"/>
+        <Label Content="Баланс" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="427,231,0,0" Height="26" Width="48" Grid.Column="2"/>
+        <Label Content="К оплате" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="417,197,0,0" Height="26" Width="58" Grid.Column="2"/>
+        <Label Content="Число дней" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="401,159,0,0" Height="26" Width="74" Grid.Column="2"/>
+        <Label Content="в сутки" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="773,57,0,0" Height="26" Width="50" Grid.Column="2"/>
+        <Label Content="цена" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="601,57,0,0" RenderTransformOrigin="1.277,0.763" Height="26" Width="36" Grid.Column="2"/>
+        <Label Content="№ авто" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="413,55,0,0" Height="26" Width="59" Grid.Column="2"/>
+        <Label Content="Акт аренды от" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="517,26,0,0" Height="26" Width="88" Grid.Column="2"/>
+        <Button HorizontalAlignment="Left" Click="Write_Click" Background="LightGreen" VerticalAlignment="Top" Width="288" Margin="481,285,0,0" Height="38" Grid.Column="2">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/icons8-сохранить-как-16.png" Margin="0,0,5,0" />
+                <TextBlock Text="Записать" FontWeight="Bold"/>
+            </StackPanel>
+        </Button>
+        <TextBlock x:Name ="Uzver" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Bottom" Margin="38,0,0,386" Height="22" Width="78" Grid.Column="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

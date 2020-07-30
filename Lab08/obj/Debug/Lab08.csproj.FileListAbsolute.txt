@@ -1,0 +1,17 @@
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\bin\Debug\Lab08.exe.config
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\bin\Debug\Lab08.exe
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\bin\Debug\Lab08.pdb
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\MainWindow.g.cs
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\App.g.cs
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08_MarkupCompile.cache
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08_MarkupCompile.lref
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\MainWindow.baml
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08.g.resources
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08.Properties.Resources.resources
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08.csproj.GenerateResource.cache
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08.csproj.CoreCompileInputs.cache
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08.exe
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08.pdb
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Window1.g.cs
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Window1.baml
+d:\Загрузки\OOP-2-master\OOP-2-master\Lab08\Lab08\obj\Debug\Lab08.csprojAssemblyReference.cache
