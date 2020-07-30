@@ -190,7 +190,7 @@ namespace Lab08
                 }
             };
 
-                SeriesCollection.Add(new ColumnSeries
+                TEST.Series.Add(new ColumnSeries
                 {
                     Title = "Расходы",
                     Values = new ChartValues<double>(allValues123)
